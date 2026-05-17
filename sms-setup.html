@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>短信验证码配置 SMS Setup</title>
+    <link rel="preload" href="assets/ink-wash-hero-bg.png" as="image" />
+    <link rel="stylesheet" href="staff.css" />
+  </head>
+  <body>
+    <div class="staff-bg" aria-hidden="true">
+      <img src="assets/ink-wash-hero-bg.png" alt="" />
+    </div>
+
+    <header class="staff-topbar">
+      <a class="staff-brand" href="staff.html">
+        <span>信</span>
+        <strong>短信验证码配置</strong>
+        <em>SMS Verification Setup</em>
+      </a>
+      <div class="topbar-actions">
+        <a class="ghost-btn" href="staff.html">工作人员后台 Staff</a>
+        <a class="primary-btn" href="index.html">顾客网站 Customer Site</a>
+      </div>
+    </header>
+
+    <main class="staff-shell setup-shell">
+      <section class="staff-hero setup-hero">
+        <div>
+          <p class="section-kicker">真实验证码 Real SMS</p>
+          <h1>把顾客手机验证码接到阿里云短信</h1>
+          <p>这里用于本机配置短信服务。保存后，顾客点击“发送验证码”会真正收到短信，不再使用本地测试码。</p>
+        </div>
+      </section>
+
+      <section class="setup-grid">
+        <form class="staff-panel setup-card" id="smsConfigForm">
+          <div class="panel-head">
+            <div>
+              <p class="section-kicker">Aliyun SMS</p>
+              <h2>短信服务参数</h2>
+            </div>
+            <span class="status-pill" id="configState">检测中</span>
+          </div>
+
+          <label class="setup-field">
+            <span>AccessKey ID</span>
+            <input id="accessKeyId" name="accessKeyId" autocomplete="off" placeholder="阿里云 RAM 用户 AccessKey ID" />
+          </label>
+
+          <label class="setup-field">
+            <span>AccessKey Secret</span>
+            <input id="accessKeySecret" name="accessKeySecret" type="password" autocomplete="new-password" placeholder="已配置可不填；更换时重新填写" />
+          </label>
+
+          <label class="setup-field">
+            <span>短信签名 SignName</span>
+            <input id="signName" name="signName" autocomplete="off" placeholder="例如：砺学堂" />
+          </label>
+
+          <label class="setup-field">
+            <span>模板 Code TemplateCode</span>
+            <input id="templateCode" name="templateCode" autocomplete="off" placeholder="例如：SMS_123456789" />
+          </label>
+
+          <label class="setup-field">
+            <span>地域 RegionId</span>
+            <input id="regionId" name="regionId" autocomplete="off" value="cn-hangzhou" />
+          </label>
+
+          <div class="setup-actions">
+            <button class="primary-btn" type="submit">保存短信配置</button>
+            <button class="ghost-btn light" type="button" id="reloadConfig">重新检测</button>
+          </div>
+
+          <p class="setup-note">短信模板变量必须叫 <strong>code</strong>，例如：您的验证码为 ${code}，10分钟内有效。</p>
+        </form>
+
+        <section class="staff-panel setup-card">
+          <div class="panel-head">
+            <div>
+              <p class="section-kicker">Test</p>
+              <h2>发送测试短信</h2>
+            </div>
+          </div>
+
+          <form class="test-sms-form" id="testSmsForm">
+            <label class="setup-field">
+              <span>测试手机号</span>
+              <input id="testPhone" inputmode="tel" autocomplete="tel" placeholder="输入你的手机号" />
+            </label>
+            <button class="primary-btn" type="submit">发送测试验证码</button>
+          </form>
+
+          <div class="setup-status" id="setupStatus" role="status" aria-live="polite">
+            正在读取当前配置...
+          </div>
+
+          <div class="setup-checklist">
+            <h3>你需要从阿里云准备</h3>
+            <p>1. 已审核通过的短信签名。</p>
+            <p>2. 已审核通过的验证码模板，模板变量为 code。</p>
+            <p>3. 只开通短信发送权限的 RAM AccessKey。</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="sms-setup.js"></script>
+  </body>
+</html>

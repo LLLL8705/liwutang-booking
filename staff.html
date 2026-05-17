@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>砺武堂工作人员预约中心 Staff Booking Desk</title>
+    <link rel="preload" href="assets/ink-wash-hero-bg.png" as="image" />
+    <link rel="stylesheet" href="staff.css" />
+  </head>
+  <body>
+    <div class="staff-bg" aria-hidden="true">
+      <img src="assets/ink-wash-hero-bg.png" alt="" />
+    </div>
+
+    <header class="staff-topbar">
+      <a class="staff-brand" href="index.html">
+        <span>武</span>
+        <strong>砺武堂工作人员中心</strong>
+        <em>Staff Booking Desk</em>
+      </a>
+      <div class="topbar-actions">
+        <button class="ghost-btn" type="button" id="enableNotify">开启提醒 Notify</button>
+        <button class="ghost-btn" type="button" id="refreshDesk">刷新 Refresh</button>
+        <a class="ghost-btn" href="sms-setup.html">短信配置 SMS</a>
+        <button class="ghost-btn" type="button" id="logoutStaff">退出登录 Logout</button>
+        <a class="primary-btn" href="index.html">顾客网站 Customer Site</a>
+      </div>
+    </header>
+
+    <main class="staff-shell">
+      <section class="staff-hero">
+        <div>
+          <p class="section-kicker">预约运营 Booking Operations</p>
+          <h1>新预约、客服咨询、教练时间，一页看清</h1>
+          <p>顾客端完成预约或向客服提问后，这里会同步显示预约消息、咨询问题、具体教练、课程项目、日期时间和当前时段人数。</p>
+        </div>
+        <div class="hero-actions">
+          <button class="primary-btn" type="button" id="copyDaySummary">复制今日排课 Copy Today</button>
+          <button class="ghost-btn light" type="button" id="exportStaffCsv">导出表格 Export CSV</button>
+        </div>
+      </section>
+
+      <section class="stats-grid" id="staffStats" aria-label="预约数据 Booking stats"></section>
+
+      <section class="staff-controls" aria-label="筛选预约 Filter bookings">
+        <label>
+          <span>教练 Coach</span>
+          <select id="coachFilter"></select>
+        </label>
+        <label>
+          <span>日期 Date</span>
+          <input id="dateFilter" type="date" />
+        </label>
+        <label>
+          <span>状态 Status</span>
+          <select id="statusFilter">
+            <option value="全部">全部 All</option>
+            <option value="待支付">待支付 Payment Pending</option>
+            <option value="待跟进">待跟进 Pending</option>
+            <option value="已联系">已联系 Contacted</option>
+            <option value="已确认">已确认 Confirmed</option>
+            <option value="已完成">已完成 Completed</option>
+            <option value="已取消">已取消 Canceled</option>
+          </select>
+        </label>
+        <label>
+          <span>搜索 Search</span>
+          <input id="staffSearch" type="search" placeholder="姓名、电话、身份证、教练、项目、目标" />
+        </label>
+        <div class="control-buttons">
+          <button class="ghost-btn light" type="button" id="todayOnly">今日 Today</button>
+          <button class="ghost-btn light" type="button" id="allDates">全部日期 All Dates</button>
+          <button class="ghost-btn light" type="button" id="markAllRead">全部已读 Mark Read</button>
+        </div>
+      </section>
+
+      <section class="desk-grid">
+        <section class="staff-panel coach-panel">
+          <div class="panel-head">
+            <div>
+              <p class="section-kicker">教练时间段 Coach Schedule</p>
+              <h2 id="scheduleTitle">今日预约人数</h2>
+            </div>
+            <span id="scheduleDateBadge"></span>
+          </div>
+          <div class="coach-board" id="coachBoard"></div>
+        </section>
+
+        <section class="staff-panel inbox-panel">
+          <div class="panel-head">
+            <div>
+              <p class="section-kicker">预约消息 Booking Inbox</p>
+              <h2>最新消息</h2>
+            </div>
+            <span id="unreadBadge"></span>
+          </div>
+          <div class="message-list" id="messageList"></div>
+        </section>
+      </section>
+
+      <section class="staff-panel support-desk-panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-kicker">客服咨询 Customer Support</p>
+            <h2>顾客问题与AI回复</h2>
+          </div>
+          <div class="panel-actions">
+            <span id="supportThreadCount"></span>
+            <button class="ghost-btn light" type="button" id="markAllSupportHandled">全部已处理</button>
+          </div>
+        </div>
+        <div class="support-thread-list" id="supportThreadList"></div>
+      </section>
+
+      <section class="staff-panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-kicker">预约名单 Booking List</p>
+            <h2>客户预约记录</h2>
+          </div>
+          <span id="listCount"></span>
+        </div>
+        <div class="staff-booking-list" id="staffBookingList"></div>
+      </section>
+
+      <section class="staff-panel audit-panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-kicker">操作日志 Audit Log</p>
+            <h2>后台关键操作记录</h2>
+          </div>
+          <span id="auditCount"></span>
+        </div>
+        <div class="audit-list" id="auditList"></div>
+      </section>
+    </main>
+
+    <div class="toast" id="staffToast" role="status" aria-live="polite"></div>
+    <script src="staff.js"></script>
+  </body>
+</html>

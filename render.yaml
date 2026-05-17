@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: liwutang-booking
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /tmp/liwutang-data
+      - key: STAFF_USERNAME
+        sync: false
+      - key: STAFF_PASSWORD
+        sync: false
+      - key: STAFF_ROLE
+        value: admin
+      - key: PAYMENT_ENABLED
+        value: "false"

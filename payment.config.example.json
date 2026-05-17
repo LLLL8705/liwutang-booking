@@ -1,0 +1,17 @@
+{
+  "enabled": false,
+  "provider": "wechat_native",
+  "wechat": {
+    "appid": "",
+    "mchid": "",
+    "serialNo": "",
+    "apiV3Key": "",
+    "privateKey": "",
+    "privateKeyPath": "certs/apiclient_key.pem",
+    "notifyUrl": "https://your-domain.com/api/payments/wechat/notify",
+    "wechatpayPublicKey": "",
+    "wechatpayPublicKeyPath": "certs/wechatpay_public_key.pem",
+    "wechatpayPublicKeyId": "",
+    "descriptionPrefix": "砺武堂武术私教预约"
+  }
+}

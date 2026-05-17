@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>工作人员登录 Staff Login</title>
+    <link rel="preload" href="assets/ink-wash-hero-bg.png" as="image" />
+    <link rel="stylesheet" href="staff.css" />
+  </head>
+  <body>
+    <div class="staff-bg" aria-hidden="true">
+      <img src="assets/ink-wash-hero-bg.png" alt="" />
+    </div>
+
+    <main class="login-shell">
+      <section class="staff-panel login-card">
+        <div class="login-brand">
+          <span>武</span>
+          <div>
+            <p class="section-kicker">Staff Access</p>
+            <h1>工作人员后台登录</h1>
+            <p>预约、身份证脱敏信息、上课地址和客服咨询只允许工作人员查看。</p>
+          </div>
+        </div>
+
+        <form id="staffLoginForm" class="setup-form">
+          <label class="setup-field">
+            <span>账号 Username</span>
+            <input id="staffUsername" autocomplete="username" placeholder="admin" />
+          </label>
+          <label class="setup-field">
+            <span>密码 Password</span>
+            <input id="staffPassword" type="password" autocomplete="current-password" placeholder="请输入后台密码" />
+          </label>
+          <button class="primary-btn" type="submit">登录后台</button>
+          <p class="setup-status" id="loginStatus" role="status" aria-live="polite">首次本机默认账号：admin，默认密码请上线前修改。</p>
+        </form>
+      </section>
+    </main>
+
+    <script src="login.js"></script>
+  </body>
+</html>

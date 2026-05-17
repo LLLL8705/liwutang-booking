@@ -1,0 +1,8 @@
+{
+  "provider": "aliyun",
+  "accessKeyId": "你的阿里云AccessKeyId",
+  "accessKeySecret": "你的阿里云AccessKeySecret",
+  "signName": "你的短信签名",
+  "templateCode": "SMS_123456789",
+  "regionId": "cn-hangzhou"
+}
