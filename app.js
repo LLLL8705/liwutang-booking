@@ -1,44 +1,5 @@
 const coaches = [
   {
-    id: "li",
-    nameCn: "李政翰",
-    nameEn: "Li Zhenghan",
-    initials: "李",
-    titleCn: "竞技武术套路教练",
-    titleEn: "Competitive Wushu Forms Coach",
-    yearsCn: "一级运动员",
-    yearsEn: "National First-Class Athlete",
-    price: "¥420/节",
-    specialties: ["竞技武术套路 Competitive Wushu", "长拳 Long Fist", "刀术 Broadsword", "棍术 Staff", "翻子拳 Fanziquan"],
-    focusCn: "现北京队武术队队员，主攻竞技武术套路，擅长长拳、刀术、棍术与翻子拳。课程强调动作规格、速度节奏、腾空质量和成套表现力。",
-    focusEn: "Current Beijing Wushu Team athlete specializing in competitive forms, long fist, broadsword, staff, and Fanziquan.",
-    certificationCn: "2018年全国青少年武术套路锦标赛暨世界青少年选拔赛棍术第一名；2020年全国中学生武术锦标赛暨第十八届世界中学生运动会武术项目长拳第一名；2024年首都高等学校武术套路比赛长拳、刀术、棍术第一名；2024年全国大学生武术套路锦标赛丁组刀术第二名；2025年全国大学生武术套路锦标赛丁组翻子拳第一名。",
-    certificationEn: "Beijing Wushu Team athlete with first-place results in staff, long fist, broadsword, and Fanziquan events; national university broadsword runner-up.",
-    achievements: [
-      "现北京队武术队队员 · 一级运动员",
-      "2018年全国青少年武术套路锦标赛暨世界青少年选拔赛：棍术第一名",
-      "2020年全国中学生武术锦标赛暨第十八届世界中学生运动会武术项目：长拳第一名",
-      "2024年首都高等学校武术套路比赛：长拳、刀术、棍术第一名",
-      "2024年全国大学生武术套路锦标赛丁组：刀术第二名",
-      "2025年全国大学生武术套路锦标赛丁组：翻子拳第一名"
-    ],
-    photo: "assets/li-zhenghan-photo.jpg",
-    photoClass: "li",
-    schedule: {
-      0: ["10:30", "15:30", "19:30"],
-      1: ["09:30", "14:30", "20:00"],
-      2: ["10:00", "16:00", "19:30"],
-      3: ["09:30", "15:30", "20:00"],
-      4: ["10:30", "16:00", "19:30"],
-      5: ["09:00", "11:00", "15:30"],
-      6: ["09:30", "14:00", "16:30"]
-    },
-    videos: [
-      { titleCn: "李政翰介绍视频", titleEn: "Li Zhenghan Introduction", topicCn: "北京队队员、一级运动员、竞技武术套路展示", topicEn: "Beijing Wushu Team athlete and competitive forms introduction", duration: "Intro 01", src: "assets/li-zhenghan-intro-1-balanced.mp4", poster: "assets/li-zhenghan-photo.jpg" },
-      { titleCn: "李政翰训练介绍", titleEn: "Training Introduction", topicCn: "长拳、刀术、棍术与翻子拳专项能力展示", topicEn: "Long fist, broadsword, staff, and Fanziquan training showcase", duration: "Intro 02", src: "assets/li-zhenghan-intro-2-balanced.mp4", poster: "assets/li-zhenghan-photo.jpg" }
-    ]
-  },
-  {
     id: "zhu",
     nameCn: "朱万博",
     nameEn: "Zhu Wanbo",
@@ -74,11 +35,7 @@ const coaches = [
       4: ["10:00", "15:30", "19:30"],
       5: ["09:30", "11:30", "16:00"],
       6: ["10:00", "14:00", "16:30"]
-    },
-    videos: [
-      { titleCn: "朱万博精彩片段", titleEn: "Zhu Wanbo Highlight", topicCn: "南拳专项高密度动作展示，约20秒精彩片段", topicEn: "High-energy Nanquan forms highlight, about 20 seconds", duration: "00:20", src: "assets/zhu-wanbo-highlight-20s.mp4", poster: "assets/zhu-wanbo-highlight-poster.jpg" },
-      { titleCn: "朱万博器械专项", titleEn: "Weapons & Traditional Forms", topicCn: "朴刀、形意拳与竞技套路进阶训练", topicEn: "Pudao, Xingyiquan, and advanced competitive forms", duration: "Intro 02", src: "assets/zhu-wanbo-intro-2-standard.mp4", poster: "assets/zhu-wanbo-action-photo.jpg" }
-    ]
+    }
   },
   {
     id: "guo",
@@ -113,11 +70,7 @@ const coaches = [
       4: ["10:30", "16:00", "19:30"],
       5: ["09:30", "11:30", "15:30"],
       6: ["10:00", "14:30", "16:30"]
-    },
-    videos: [
-      { titleCn: "郭子嘉演示视频", titleEn: "Guo Zijia Demonstration", topicCn: "太极拳与形意拳专项动作展示，完整约47秒", topicEn: "Tai Chi and Xingyiquan movement demonstration, about 47 seconds", duration: "00:47", src: "assets/guo-zijia-intro-balanced.mp4", poster: "assets/guo-zijia-video-poster.jpg" },
-      { titleCn: "郭子嘉形意拳专项", titleEn: "Xingyiquan Champion Profile", topicCn: "形意拳冠军经历与传统套路训练方向", topicEn: "Xingyiquan champion background and traditional forms training focus", duration: "Photo", poster: "assets/guo-zijia-photo.jpg" }
-    ]
+    }
   },
   {
     id: "zhang",
@@ -156,30 +109,57 @@ const coaches = [
       4: ["10:00", "16:30", "20:00"],
       5: ["09:00", "11:30", "15:30"],
       6: ["10:00", "14:30", "17:00"]
-    },
-    videos: [
-      { titleCn: "张清淳精彩20秒", titleEn: "Zhang Qingchun Highlight", topicCn: "枪术动作高密度精剪，腾空、翻转与落地衔接", topicEn: "High-energy spear highlight with jump, rotation, and landing sequence", duration: "00:20", src: "assets/zhang-qingchun-highlight-20s.mp4", poster: "assets/zhang-qingchun-highlight-poster.jpg" },
-      { titleCn: "张清淳剑术与八卦掌", titleEn: "Sword & Baguazhang Focus", topicCn: "剑术规格、八卦掌身法与竞赛套路提升方向", topicEn: "Sword quality, Baguazhang bodywork, and competitive forms development", duration: "Photo", poster: "assets/zhang-qingchun-photo.jpg" }
-    ]
+    }
+  },
+  {
+    id: "xiang",
+    nameCn: "李响",
+    nameEn: "Li Xiang",
+    initials: "响",
+    titleCn: "通臂拳与棍术专项教练",
+    titleEn: "Tongbeiquan & Staff Coach",
+    yearsCn: "中国武术六段 · 国家一级运动员",
+    yearsEn: "Wushu 6th Duan · National First-Class Athlete",
+    price: "¥420/节",
+    specialties: ["竞技武术套路 Competitive Wushu", "通臂拳 Tongbeiquan", "棍术 Staff", "传统套路 Traditional Forms", "赛事专项 Competition Prep"],
+    focusCn: "北京武术队现役运动员，北京体育大学现役班，中国武术六段、国家一级运动员、初级教练员、国家二级裁判员。擅长通臂拳、棍术与竞技套路专项训练，课程适合想提升传统拳种表现力、器械稳定性和赛事质量的学员。",
+    focusEn: "Active Beijing Wushu Team athlete and Beijing Sport University active class student, specializing in Tongbeiquan, staff, and competition-focused forms training.",
+    certificationCn: "北京武术队现役运动员；北京体育大学现役班；中国武术六段；国家一级运动员；初级教练员；国家二级裁判员。",
+    certificationEn: "Active Beijing Wushu Team athlete, Beijing Sport University active class, Wushu 6th Duan, National First-Class Athlete, junior coach, and national second-level judge.",
+    achievements: [
+      "北京武术队现役运动员 · 北京体育大学现役班",
+      "中国武术六段 · 国家一级运动员",
+      "初级教练员 · 国家二级裁判员",
+      "北京市武术套路锦标赛、冠军赛：连续多年蝉联冠军",
+      "2024年全国武术套路冠军赛：男子通臂拳第八名",
+      "2025年全国武术套路冠军赛：男子棍术第十名",
+      "2026年全国武术套路冠军赛：男子通臂拳第八名"
+    ],
+    photo: "assets/li-xiang-photo.jpg",
+    photoClass: "xiang",
+    schedule: {
+      0: ["10:00", "15:00", "19:30"],
+      1: ["09:30", "14:30", "20:00"],
+      2: ["10:30", "16:00", "19:30"],
+      3: ["09:30", "15:30", "20:00"],
+      4: ["10:00", "16:30", "19:30"],
+      5: ["09:30", "11:30", "15:30"],
+      6: ["10:00", "14:00", "17:00"]
+    }
   }
 ];
 
-const liCoachIndex = coaches.findIndex((coach) => coach.id === "li");
-const zhangCoachIndex = coaches.findIndex((coach) => coach.id === "zhang");
-if (liCoachIndex > -1 && zhangCoachIndex > -1) {
-  [coaches[liCoachIndex], coaches[zhangCoachIndex]] = [coaches[zhangCoachIndex], coaches[liCoachIndex]];
-}
-
-const professionalCoachIds = new Set(["zhang", "zhu", "guo", "li"]);
+const professionalCoachIds = new Set(["zhang", "zhu", "guo", "xiang"]);
 for (let index = coaches.length - 1; index >= 0; index -= 1) {
   if (!professionalCoachIds.has(coaches[index].id)) coaches.splice(index, 1);
 }
 
 const programs = [
-  { nameCn: "竞技武术套路", nameEn: "Competitive Wushu", mark: "竞", descCn: "长拳、刀术、棍术、翻子拳与成套表现力训练，适合赛事准备和专业进阶。", descEn: "Long fist, broadsword, staff, Fanziquan, and competition routine performance.", tags: ["李政翰", "长拳 Long Fist", "刀棍 Staff"] },
+  { nameCn: "竞技武术套路", nameEn: "Competitive Wushu", mark: "竞", descCn: "长拳、刀术、棍术与成套表现力训练，适合赛事准备和专业进阶。", descEn: "Long fist, broadsword, staff, and competition routine performance.", tags: ["张清淳", "李响", "器械 Staff"] },
   { nameCn: "南拳与南派器械", nameEn: "Nanquan & Southern Weapons", mark: "南", descCn: "南拳、南刀、南棍、朴刀与南派发力体系，适合南派专项提升。", descEn: "Nanquan, Nandao, Nangun, Pudao, and southern power expression.", tags: ["朱万博", "南拳 Nanquan", "南刀南棍"] },
   { nameCn: "太极拳与形意拳", nameEn: "Tai Chi & Xingyiquan", mark: "太", descCn: "太极拳、形意拳与传统套路表现，适合传统项目与赛事质量提升。", descEn: "Tai Chi, Xingyiquan, traditional forms, and competition-level refinement.", tags: ["郭子嘉", "太极 Tai Chi", "形意 Xingyi"] },
-  { nameCn: "剑术枪术八卦掌", nameEn: "Sword, Spear & Baguazhang", mark: "剑", descCn: "剑术、枪术、八卦掌与高水平器械套路训练，适合冲击赛事和专项打磨。", descEn: "Sword, spear, Baguazhang, and advanced weapons routine training.", tags: ["张清淳", "剑术 Sword", "枪术 Spear"] }
+  { nameCn: "剑术枪术八卦掌", nameEn: "Sword, Spear & Baguazhang", mark: "剑", descCn: "剑术、枪术、八卦掌与高水平器械套路训练，适合冲击赛事和专项打磨。", descEn: "Sword, spear, Baguazhang, and advanced weapons routine training.", tags: ["张清淳", "剑术 Sword", "枪术 Spear"] },
+  { nameCn: "通臂拳与棍术", nameEn: "Tongbeiquan & Staff", mark: "通", descCn: "通臂拳、棍术与传统套路专项训练，适合传统拳种表现力、器械稳定性和赛事质量提升。", descEn: "Tongbeiquan, staff, traditional forms, and competition-focused refinement.", tags: ["李响", "通臂拳 Tongbei", "棍术 Staff"] }
 ];
 
 const state = {
@@ -187,7 +167,6 @@ const state = {
   selectedCoachId: coaches[0].id,
   selectedDateIndex: 0,
   selectedSlot: "",
-  activeVideoCoachId: coaches[0].id,
   bookingSearch: "",
   bookingStatusFilter: "全部",
   bookings: JSON.parse(localStorage.getItem("wushuBookings") || "[]"),
@@ -196,7 +175,6 @@ const state = {
 };
 
 const coachGrid = document.querySelector("#coachGrid");
-const videoGrid = document.querySelector("#videoGrid");
 const coachFilters = document.querySelector("#coachFilters");
 const programGrid = document.querySelector("#programGrid");
 const coachSelect = document.querySelector("#coachSelect");
@@ -218,25 +196,24 @@ const exportBookings = document.querySelector("#exportBookings");
 const copyConsultation = document.querySelector("#copyConsultation");
 const shareConsultation = document.querySelector("#shareConsultation");
 const toast = document.querySelector("#toast");
-const videoModal = document.querySelector("#videoModal");
-const closeModal = document.querySelector("#closeModal");
-const bookFromVideo = document.querySelector("#bookFromVideo");
-const playToggle = document.querySelector("#playToggle");
-const modalReel = document.querySelector("#modalReel");
-const modalPoster = document.querySelector("#modalPoster");
-const modalVideo = document.querySelector("#modalVideo");
-const modalCoach = document.querySelector("#modalCoach");
-const modalTitle = document.querySelector("#modalTitle");
-const modalTopic = document.querySelector("#modalTopic");
-const modalDuration = document.querySelector("#modalDuration");
-const timelineProgress = document.querySelector("#timelineProgress");
+const bookingLiveStage = document.querySelector("#bookingLiveStage");
+const liveStageImage = document.querySelector("#liveStageImage");
+const liveStageKicker = document.querySelector("#liveStageKicker");
+const liveStageTitle = document.querySelector("#liveStageTitle");
+const liveStageNumber = document.querySelector("#liveStageNumber");
+const liveStagePrimaryLabel = document.querySelector("#liveStagePrimaryLabel");
+const liveStagePrimary = document.querySelector("#liveStagePrimary");
+const liveStagePrimaryNote = document.querySelector("#liveStagePrimaryNote");
+const liveStageSecondaryLabel = document.querySelector("#liveStageSecondaryLabel");
+const liveStageSecondary = document.querySelector("#liveStageSecondary");
+const liveStageSecondaryNote = document.querySelector("#liveStageSecondaryNote");
+const liveStageProgress = document.querySelector("#liveStageProgress");
 const advisorForm = document.querySelector("#advisorForm");
 const advisorResult = document.querySelector("#advisorResult");
 const advisorName = document.querySelector("#advisorName");
 const advisorAge = document.querySelector("#advisorAge");
 const advisorGender = document.querySelector("#advisorGender");
 const advisorPhone = document.querySelector("#advisorPhone");
-const advisorIdCard = document.querySelector("#advisorIdCard");
 const guardianName = document.querySelector("#guardianName");
 const guardianPhone = document.querySelector("#guardianPhone");
 const emergencyName = document.querySelector("#emergencyName");
@@ -268,6 +245,64 @@ const supportSessionKey = "wushuSupportSessionId";
 const phoneVerificationKey = "wushuPhoneVerification";
 const supportSessionId = getOrCreateSupportSessionId();
 const apiEnabled = window.location.protocol !== "file:";
+const bookingLiveSlides = [
+  {
+    number: "01",
+    image: "assets/ink-wash-hero-bg.png",
+    alt: "预约流程第一步：选择训练目标",
+    kicker: "STEP 01 · GOAL",
+    title: "先说目标，AI判断训练方向",
+    primaryLabel: "目标信息",
+    primary: "年龄 / 基础 / 项目 / 目标",
+    primaryNote: "比赛、升学、专项提升或零基础入门都可以填写。",
+    secondaryLabel: "下一步",
+    secondary: "生成教练推荐",
+    secondaryNote: "AI会根据目标先给出更合适的教练方向。"
+  },
+  {
+    number: "02",
+    image: "assets/zhang-qingchun-photo.jpg",
+    alt: "预约流程第二步：匹配专业教练",
+    kicker: "STEP 02 · COACH",
+    title: "根据专项匹配合适教练",
+    primaryLabel: "推荐教练",
+    primary: "长拳 / 剑枪 / 太极 / 南拳 / 通臂",
+    primaryNote: "系统会优先匹配教练擅长项目和学员训练目标。",
+    secondaryLabel: "推荐结果",
+    secondary: "教练 + 课程 + 理由",
+    secondaryNote: "可以查看教练资历、比赛成绩和专项方向。"
+  },
+  {
+    number: "03",
+    image: "assets/dojo-hero.png",
+    alt: "预约流程第三步：确认日期、时间和地点",
+    kicker: "STEP 03 · TIME",
+    title: "确认日期、时间和上课方式",
+    primaryLabel: "预约信息",
+    primary: "日期 / 时间 / 定点或上门",
+    primaryNote: "上门课需要填写具体地址，工作人员会电话确认。",
+    secondaryLabel: "服务协议",
+    secondary: "本页阅读并确认",
+    secondaryNote: "协议会带入姓名、电话、教练和课程信息。"
+  },
+  {
+    number: "04",
+    image: "assets/zhu-wanbo-action-photo.jpg",
+    alt: "预约流程第四步：开始一对一武术训练",
+    kicker: "STEP 04 · TRAINING",
+    title: "按约定时间开始一对一训练",
+    primaryLabel: "训练开始",
+    primary: "专项动作 / 基础评估 / 训练计划",
+    primaryNote: "第一节课会根据基础和目标确定后续训练路线。",
+    secondaryLabel: "预约完成",
+    secondary: "生成编号，工作人员跟进",
+    secondaryNote: "提交后后台同步预约信息，便于工作人员安排。"
+  }
+];
+
+let bookingLiveIndex = 0;
+let bookingLiveTimer = null;
+let bookingLiveSwitchTimer = null;
 const agreementFile = "assets/wushu-private-coaching-agreement.pdf";
 const agreementName = "武术私教服务协议";
 const agreementVersion = "2026-05-16-commercial-risk-v2";
@@ -306,15 +341,6 @@ const phoneVerification = {
 let paymentPollingTimer = null;
 const advisorProfiles = [
   {
-    coachId: "li",
-    programName: "竞技武术套路",
-    projectCn: "竞技武术套路",
-    projectEn: "Competitive Wushu",
-    keywords: ["竞技", "套路", "比赛", "竞赛", "赛事", "冠军", "长拳", "刀术", "棍术", "翻子", "表演", "专业", "腾空", "考级", "升学"],
-    reasonCn: "你的目标更偏向动作规格、套路表现和专业进阶，李政翰的北京队训练背景与赛事成绩最匹配。",
-    pathCn: "建议先做动作基础评估，再进入长拳、器械或成套表现力训练。"
-  },
-  {
     coachId: "zhu",
     programName: "南拳与南派器械",
     projectCn: "南拳与器械套路",
@@ -340,6 +366,15 @@ const advisorProfiles = [
     keywords: ["剑术", "剑", "枪术", "枪", "八卦掌", "八卦", "世界冠军", "世锦赛", "世界武术锦标赛", "世界杯", "国际级", "健将", "冠军赛", "锦标赛", "全运会", "器械", "比赛", "竞赛", "赛事", "专业", "套路"],
     reasonCn: "你的目标更偏向剑术、枪术、八卦掌或世界级赛事标准，张清淳的国际级健将资质和世界冠军成绩最匹配。",
     pathCn: "建议先评估器械基础、身法路线和成套稳定性，再进入剑术、枪术或八卦掌专项强化。"
+  },
+  {
+    coachId: "xiang",
+    programName: "通臂拳与棍术",
+    projectCn: "通臂拳与棍术",
+    projectEn: "Tongbeiquan & Staff",
+    keywords: ["通臂", "通臂拳", "通背", "通背拳", "棍术", "棍", "传统套路", "冠军赛", "锦标赛", "北京体育大学", "北体", "六段", "裁判", "赛事", "比赛", "竞赛", "专业", "套路"],
+    reasonCn: "你的目标更接近通臂拳、棍术或传统套路赛事专项，李响的北京队现役背景、武术六段资质和冠军赛成绩更匹配。",
+    pathCn: "建议先评估传统拳种身法、发力路线和器械基础，再进入通臂拳、棍术或成套质量提升。"
   }
 ];
 
@@ -353,25 +388,6 @@ function coachLabel(coach) {
 
 function coachPhotoStyle(coach) {
   return coach.photo ? ` style="--coach-photo: url('${coach.photo}')"` : "";
-}
-
-function renderVideoThumb(video) {
-  return `<img src="${video.poster}" alt="${video.titleCn} ${video.titleEn}" />`;
-}
-
-function renderCoachVideoLinks(coach) {
-  if (!coach.videos.length) return "";
-
-  return `
-    <div class="coach-video-links" aria-label="${coach.nameCn} 视频列表">
-      ${coach.videos
-        .map(
-          (video, index) =>
-            `<button type="button" data-coach-video-id="${coach.id}-${index}">${index + 1}. ${video.titleCn}</button>`
-        )
-        .join("")}
-    </div>
-  `;
 }
 
 function renderCoachAchievements(coach) {
@@ -452,46 +468,9 @@ function renderCoaches() {
             ${renderCoachAchievements(coach)}
             <div class="coach-actions">
               <button type="button" data-book-coach="${coach.id}">约Ta的课 Book</button>
-              <button type="button" data-video-coach="${coach.id}">看视频 Video</button>
             </div>
-            ${renderCoachVideoLinks(coach)}
           </div>
         </article>
-      `
-    )
-    .join("");
-}
-
-function renderVideos() {
-  const videos = coaches.flatMap((coach) =>
-    coach.videos.map((video, index) => ({
-      ...video,
-      coachId: coach.id,
-      coachName: coachLabel(coach),
-      poster: video.poster || coach.photo || "assets/ink-hero.png",
-      id: `${coach.id}-${index}`
-    }))
-  );
-
-  videoGrid.innerHTML = videos
-    .map(
-      (video) => `
-        <button class="video-card" type="button" data-video-id="${video.id}">
-          <span class="video-thumb">
-            ${renderVideoThumb(video)}
-            <span class="play-mark">${video.src ? "播放" : "▶"}</span>
-          </span>
-          <span class="video-body">
-            <span class="video-meta">
-              <span>${video.coachName}</span>
-              <span>${video.duration}</span>
-            </span>
-            <h3>${video.titleCn}</h3>
-            <strong>${video.titleEn}</strong>
-            <p>${video.topicCn}</p>
-            <p class="en">${video.topicEn}</p>
-          </span>
-        </button>
       `
     )
     .join("");
@@ -659,6 +638,7 @@ function renderStatusOptions(status) {
 }
 
 function renderBookings() {
+  if (!bookingList) return;
   renderBookingStats();
 
   if (!state.bookings.length) {
@@ -1019,13 +999,6 @@ function syncMinorSafetyPanel() {
   if (agreementModal && !agreementModal.hidden) renderAgreementDocument();
 }
 
-function maskIdCard(value) {
-  const id = String(value || "").trim();
-  if (!id) return "";
-  if (id.length <= 8) return id.replace(/.(?=.{2})/g, "*");
-  return `${id.slice(0, 3)}${"*".repeat(Math.max(6, id.length - 7))}${id.slice(-4)}`;
-}
-
 function paymentPlanAmount(value = paymentPlan?.value) {
   if (value === "trial-99") return "¥99";
   if (value === "trial-199") return "¥199";
@@ -1072,7 +1045,7 @@ function renderAdvisorValidation(messages) {
 
 function validateAdvisorFields({ includeIntent = true } = {}) {
   const messages = [];
-  clearFieldErrors([advisorName, advisorAge, advisorGender, advisorPhone, advisorIdCard, guardianName, guardianPhone, advisorGoal, advisorIdeas]);
+  clearFieldErrors([advisorName, advisorAge, advisorGender, advisorPhone, guardianName, guardianPhone, advisorGoal, advisorIdeas]);
 
   if (!advisorName.value.trim()) messages.push(setFieldError(advisorName, "请填写姓名"));
 
@@ -1089,10 +1062,6 @@ function validateAdvisorFields({ includeIntent = true } = {}) {
     messages.push(setFieldError(advisorPhone, "请填写联系电话"));
   } else if (!isValidPhone(advisorPhone.value)) {
     messages.push(setFieldError(advisorPhone, "联系电话格式不正确"));
-  }
-
-  if (advisorIdCard.value.trim() && !isValidIdCard(advisorIdCard.value)) {
-    messages.push(setFieldError(advisorIdCard, "身份证号格式不正确，请填写15位或18位身份证号；预约阶段可先不填"));
   }
 
   if (minorSafetyRequired()) {
@@ -1127,7 +1096,7 @@ function setAgreementError(message) {
 
 function validateBookingFields(location) {
   const messages = [];
-  clearFieldErrors([advisorName, advisorAge, advisorPhone, advisorIdCard, guardianName, guardianPhone, emergencyName, emergencyPhone, healthHistory, riskAcknowledged, bookingAddress, paymentPlan, paymentMethod, paymentAcknowledged]);
+  clearFieldErrors([advisorName, advisorAge, advisorPhone, guardianName, guardianPhone, emergencyName, emergencyPhone, healthHistory, riskAcknowledged, bookingAddress, paymentPlan, paymentMethod, paymentAcknowledged]);
 
   if (!state.selectedSlot) {
     slotGrid?.classList.add("is-invalid");
@@ -1140,10 +1109,6 @@ function validateBookingFields(location) {
     messages.push(setFieldError(advisorPhone, "请填写联系电话"));
   } else if (!isValidPhone(advisorPhone.value)) {
     messages.push(setFieldError(advisorPhone, "联系电话格式不正确"));
-  }
-
-  if (advisorIdCard.value.trim() && !isValidIdCard(advisorIdCard.value)) {
-    messages.push(setFieldError(advisorIdCard, "身份证号格式不正确；预约阶段可先不填，签约/付款后再补充"));
   }
 
   if (location.serviceMode === "home" && !location.serviceAddress) {
@@ -1224,7 +1189,6 @@ function getSupportCustomerSnapshot() {
   return {
     name: advisorName.value.trim(),
     phone: advisorPhone.value.trim(),
-    idCard: maskIdCard(advisorIdCard.value.trim()),
     age: advisorAge.value,
     gender: advisorGender.value,
     guardianName: minorSafetyRequired() ? guardianName.value.trim() : "",
@@ -1252,7 +1216,6 @@ function saveSupportExchange(question, reply) {
   if (existing) {
     existing.name = customer.name || existing.name || "未留姓名";
     existing.phone = customer.phone || existing.phone || "";
-    existing.idCard = customer.idCard || existing.idCard || "";
     existing.age = customer.age || existing.age || "";
     existing.gender = customer.gender || existing.gender || "";
     existing.guardianName = customer.guardianName || existing.guardianName || "";
@@ -1272,7 +1235,6 @@ function saveSupportExchange(question, reply) {
       id: supportSessionId,
       name: customer.name || "未留姓名",
       phone: customer.phone || "",
-      idCard: customer.idCard || "",
       age: customer.age || "",
       gender: customer.gender || "",
       guardianName: customer.guardianName || "",
@@ -1333,7 +1295,6 @@ function renderAgreementDocument() {
 
       <section class="agreement-party-grid">
         ${agreementLine("甲方（学员/监护人）：", advisorName.value.trim() || "__________")}
-        ${agreementLine("身份证号：", advisorIdCard.value.trim() ? maskIdCard(advisorIdCard.value.trim()) : "签约/付款后补充")}
         ${agreementLine("联系电话：", advisorPhone.value.trim() || "__________")}
         ${minor ? agreementLine("监护人：", guardianName.value.trim() || "未成年人必填") : ""}
         ${minor ? agreementLine("监护人电话：", guardianPhone.value.trim() || "未成年人必填") : ""}
@@ -1347,7 +1308,7 @@ function renderAgreementDocument() {
         <ol>
           <li>预约课程：${escapeHTML(programSelect.options[programSelect.selectedIndex]?.textContent || "页面所选课程")}；预约教练：${escapeHTML(coachName)}。</li>
           <li>预约时间：${escapeHTML(upcomingDates[state.selectedDateIndex]?.label || "待选择")} ${escapeHTML(state.selectedSlot || "待选择")}。</li>
-          <li>体验课确认：${escapeHTML(paymentPlanAmount())}；确认方式：${escapeHTML(paymentMethodLabel())}；公开视频版本提交后由工作人员电话确认。</li>
+          <li>体验课确认：${escapeHTML(paymentPlanAmount())}；确认方式：${escapeHTML(paymentMethodLabel())}；预约信息提交后由工作人员电话确认。</li>
           <li>预约规则：上课需提前24小时预约；临时取消未提前24小时告知，将按本协议取消与爽约规则处理。</li>
         </ol>
       </section>
@@ -1386,7 +1347,6 @@ function renderAgreementDocument() {
         <h5>五、个人信息与证据链</h5>
         <ol>
           <li>甲方同意乙方为预约排课、联系确认、合同履行、安全风控和售后处理所必需，处理本次提交的姓名、电话、年龄、训练目标、上课地址、健康提示、监护人和紧急联系人信息。</li>
-          <li>身份证号仅在签约、付款、发票、争议处理或法律法规要求时补充；后台展示应做脱敏处理。</li>
           <li>系统将记录预约编号、订单编号、协议版本、打开时间、确认时间、手机号验证时间、预约教练、课程、时间、地点、支付状态和协议文本快照。</li>
         </ol>
       </section>
@@ -1409,7 +1369,7 @@ function renderAgreementDocument() {
       <section class="agreement-confirmation">
         <strong>预约确认声明</strong>
         <p>${agreementConfirmationText}</p>
-        <small>点击下方“我已完整阅读并确认”后，系统会记录协议版本、打开时间、确认时间、顾客姓名、联系电话、身份证号、预约教练、课程与上课地点信息。</small>
+        <small>点击下方“我已完整阅读并确认”后，系统会记录协议版本、打开时间、确认时间、顾客姓名、联系电话、预约教练、课程与上课地点信息。</small>
       </section>
     </article>
   `;
@@ -1432,7 +1392,6 @@ function buildAgreementSnapshotText(booking) {
     `订单编号：${booking.orderId || "待生成"}`,
     `学员：${booking.name || ""}`,
     `电话：${booking.phone || ""}`,
-    `身份证号：${booking.idCardMasked || maskIdCard(booking.idCard) || "签约/付款后补充"}`,
     `年龄/性别：${booking.age || ""} / ${booking.gender || ""}`,
     booking.isMinor ? `监护人：${booking.guardianName || ""} ${booking.guardianPhone || ""}` : "成年学员：无需监护人与紧急联系人",
     booking.isMinor ? `紧急联系人：${booking.emergencyName || ""} ${booking.emergencyPhone || ""}` : "",
@@ -1643,25 +1602,18 @@ function getSupportReply(question) {
 
   if (/教练|老师|师资|冠军|谁教|介绍/.test(text) || coach) {
     return {
-      text: `目前可约教练：${coaches.map((item) => item.nameCn).join("、")}。\n每位教练都有真实简介、成绩和视频，你也可以说“我想学太极/剑术/南拳/长拳”，我会直接推荐。`,
+      text: `目前可约教练：${coaches.map((item) => item.nameCn).join("、")}。\n每位教练都有真实简介、资历和比赛成绩，你也可以说“我想学太极/剑术/南拳/长拳”，我会直接推荐。`,
       actions: [{ label: "看教练详情", target: "#coaches" }]
     };
   }
 
-  if (/推荐|适合|我想学|想练|太极|形意|南拳|南刀|南棍|朴刀|剑术|枪术|八卦|长拳|刀术|棍术|翻子|比赛|考级|升学|零基础|入门/.test(text)) {
+  if (/推荐|适合|我想学|想练|太极|形意|南拳|南刀|南棍|朴刀|剑术|枪术|八卦|长拳|刀术|棍术|通臂|通背|比赛|考级|升学|零基础|入门/.test(text)) {
     return {
       text: buildRecommendationSupportText(question),
       actions: [
         { label: "填写AI选课", target: "#ai-advisor" },
         { label: "看推荐教练", target: "#coaches" }
       ]
-    };
-  }
-
-  if (/视频|演示|作品|训练片段|看一下/.test(text)) {
-    return {
-      text: "每位教练都有训练视频或精彩片段。你可以先看真实动作和专项风格，再决定是否预约体验课。",
-      actions: [{ label: "看训练视频", target: "#videos" }]
     };
   }
 
@@ -1768,7 +1720,6 @@ function getCurrentBookingDraft() {
     age: advisorAge.value || "待填写",
     gender: advisorGender.value || "待填写",
     phone: advisorPhone.value.trim() || "待填写",
-    idCard: maskIdCard(advisorIdCard.value.trim()) || "签约/付款后补充",
     guardianName: minor ? guardianName.value.trim() : "",
     guardianPhone: minor ? guardianPhone.value.trim() : "",
     emergencyName: minor ? emergencyName.value.trim() : "",
@@ -1801,7 +1752,6 @@ function formatBookingMessage(booking) {
     booking.orderId ? `订单编号：${booking.orderId}` : "",
     `学员：${booking.name || "待填写"}`,
     `电话：${booking.phone || "待填写"}`,
-    `身份证号：${booking.idCardMasked || maskIdCard(booking.idCard) || "签约/付款后补充"}`,
     booking.age ? `年龄：${booking.age}` : "",
     booking.gender ? `性别：${booking.gender}` : "",
     booking.guardianName ? `监护人：${booking.guardianName} ${booking.guardianPhone || ""}` : "",
@@ -1995,10 +1945,6 @@ function renderPostBookingPanel(booking) {
           <strong>${escapeHTML(booking.coachName)}</strong>
         </div>
         <div>
-          <span>身份证号 ID</span>
-          <strong>${escapeHTML(booking.idCardMasked || maskIdCard(booking.idCard) || "签约/付款后补充")}</strong>
-        </div>
-        <div>
           <span>时间 Time</span>
           <strong>${escapeHTML(`${booking.dateLabel || booking.date} ${booking.day || ""} ${booking.slot}`)}</strong>
         </div>
@@ -2079,14 +2025,13 @@ function exportBookingCSV() {
     return;
   }
 
-  const headers = ["预约编号", "订单编号", "状态", "姓名", "电话", "身份证号脱敏", "年龄", "监护人", "紧急联系人", "身体情况", "课程", "教练", "日期", "星期", "时间", "价格", "定金", "支付方式", "支付状态", "微信交易号", "支付完成时间", "上课方式", "具体位置", "地点说明", "服务协议", "协议乙方教练", "协议版本", "协议确认时间", "协议打开时间", "手机号记录", "目标", "备注", "创建时间"];
+  const headers = ["预约编号", "订单编号", "状态", "姓名", "电话", "年龄", "监护人", "紧急联系人", "身体情况", "课程", "教练", "日期", "星期", "时间", "价格", "定金", "支付方式", "支付状态", "微信交易号", "支付完成时间", "上课方式", "具体位置", "地点说明", "服务协议", "协议乙方教练", "协议版本", "协议确认时间", "协议打开时间", "手机号记录", "目标", "备注", "创建时间"];
   const rows = state.bookings.map((booking) => [
     booking.id || "",
     booking.orderId || "",
     getBookingStatus(booking),
     booking.name,
     booking.phone,
-    booking.idCardMasked || maskIdCard(booking.idCard) || "",
     booking.age || "",
     booking.guardianName || "",
     booking.emergencyName || "",
@@ -2128,11 +2073,35 @@ function exportBookingCSV() {
   showToast("预约名单已导出 / Bookings exported");
 }
 
-function selectProgram(programName) {
+function setAdvisorProgramPreset(programName) {
+  if (!advisorProgram) return;
+  const keywordMap = {
+    "还不确定，让AI推荐": "",
+    "竞技武术套路": "竞技武术套路",
+    "南拳与南派器械": "南拳",
+    "太极拳与形意拳": "太极拳",
+    "剑术枪术八卦掌": "剑术",
+    "通臂拳与棍术": "通臂拳",
+    "太极拳": "太极拳"
+  };
+  const keyword = Object.prototype.hasOwnProperty.call(keywordMap, programName) ? keywordMap[programName] : programName;
+  if (!keyword) {
+    advisorProgram.value = "";
+    return;
+  }
+  const matchingAdvisorProgram = Array.from(advisorProgram.options).find((option) => (
+    option.value.includes(keyword) || option.textContent.includes(keyword)
+  ));
+  if (matchingAdvisorProgram) advisorProgram.value = matchingAdvisorProgram.value;
+}
+
+function selectProgram(programName, options = {}) {
   const matchingProgram = Array.from(programSelect.options).find((option) => option.value === programName);
   if (matchingProgram) programSelect.value = matchingProgram.value;
-  scrollToBooking();
-  showToast(`${programName} 已带入预约表 / Program selected`);
+  setAdvisorProgramPreset(programName);
+  const target = options.target || "#ai-advisor";
+  document.querySelector(target)?.scrollIntoView({ behavior: "smooth", block: "center" });
+  showToast(`${programName} 已带入AI选课 / Program selected`);
 }
 
 function selectCoachForBooking(coachId, options = {}) {
@@ -2153,7 +2122,6 @@ function getAdvisorInput() {
     age: Number(advisorAge.value),
     gender: advisorGender.value,
     phone: advisorPhone.value.trim(),
-    idCard: maskIdCard(advisorIdCard.value.trim()),
     guardianName: guardianName.value.trim(),
     guardianPhone: guardianPhone.value.trim(),
     emergencyName: emergencyName.value.trim(),
@@ -2175,8 +2143,7 @@ function scoreAdvisorProfile(profile, input) {
   }
 
   if (input.age && input.age <= 13) {
-    score += profile.coachId === "li" && /比赛|竞赛|竞技|长拳|套路/.test(combined) ? 4 : 0;
-    score += profile.coachId === "li" ? 2 : 0;
+    score += profile.coachId === "xiang" && /比赛|竞赛|竞技|长拳|套路|棍术|通臂/.test(combined) ? 3 : 0;
   }
 
   if (input.age && input.age >= 45 && profile.coachId === "guo") {
@@ -2199,11 +2166,11 @@ function scoreAdvisorProfile(profile, input) {
     score += 10;
   }
 
-  if (/比赛|竞赛|冠军|专业|升学|考级/.test(combined) && profile.coachId === "li") {
-    score += 6;
+  if (/通臂|通背|棍术|棍|北体|北京体育大学|六段|裁判/.test(combined) && profile.coachId === "xiang") {
+    score += 10;
   }
 
-  if (/柔韧|协调|体能|力量|爆发|腾空/.test(combined) && ["li", "zhu"].includes(profile.coachId)) {
+  if (/柔韧|协调|体能|力量|爆发|腾空/.test(combined) && ["xiang", "zhu"].includes(profile.coachId)) {
     score += 2;
   }
 
@@ -2218,10 +2185,10 @@ function buildAdvisorRecommendation(input) {
   const best = ranked[0];
   const coach = coaches.find((item) => item.id === best.coachId) || coaches[0];
   const professionalProgramName = {
-    li: "竞技武术套路",
     zhu: "南拳与南派器械",
     guo: "太极拳与形意拳",
-    zhang: "剑术枪术八卦掌"
+    zhang: "剑术枪术八卦掌",
+    xiang: "通臂拳与棍术"
   }[best.coachId] || best.programName;
   const program = programs.find((item) => item.nameCn === professionalProgramName) || programs[0];
   const confidence = Math.min(96, Math.max(78, 78 + best.score * 2));
@@ -2289,43 +2256,70 @@ function scrollToBooking() {
   document.querySelector("#booking-card").scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
-function openVideo(videoId) {
-  const allVideos = coaches.flatMap((coach) =>
-    coach.videos.map((video, index) => ({
-      ...video,
-      id: `${coach.id}-${index}`,
-      coachId: coach.id,
-      coachName: coachLabel(coach),
-      poster: video.poster || coach.photo || "assets/ink-hero.png"
-    }))
-  );
-  const video = allVideos.find((item) => item.id === videoId);
-  if (!video) return;
-  state.activeVideoCoachId = video.coachId;
+function restartBookingLiveProgress() {
+  if (!liveStageProgress) return;
+  liveStageProgress.classList.remove("is-running");
+  void liveStageProgress.offsetWidth;
+  liveStageProgress.classList.add("is-running");
+}
 
-  modalVideo.pause();
-  modalVideo.removeAttribute("src");
-  modalVideo.load();
-  modalCoach.textContent = video.coachName;
-  modalTitle.textContent = `${video.titleCn} · ${video.titleEn}`;
-  modalTopic.textContent = `${video.topicCn} / ${video.topicEn}`;
-  modalDuration.textContent = video.duration;
-  modalPoster.src = video.poster;
-  modalPoster.alt = `${video.titleCn} ${video.titleEn}`;
-  modalPoster.hidden = Boolean(video.src);
-  modalVideo.hidden = !video.src;
-  if (video.src) {
-    modalVideo.src = video.src;
-    modalVideo.poster = video.poster;
-    modalVideo.preload = "auto";
-    modalVideo.load();
+function setBookingLiveStage(index) {
+  if (!bookingLiveStage || !bookingLiveSlides.length) return;
+  const nextIndex = (index + bookingLiveSlides.length) % bookingLiveSlides.length;
+  const slide = bookingLiveSlides[nextIndex];
+  bookingLiveIndex = nextIndex;
+
+  bookingLiveStage.classList.add("is-switching");
+  window.clearTimeout(bookingLiveSwitchTimer);
+  bookingLiveSwitchTimer = window.setTimeout(() => bookingLiveStage.classList.remove("is-switching"), 760);
+
+  if (liveStageImage) {
+    liveStageImage.src = slide.image;
+    liveStageImage.alt = slide.alt;
   }
-  modalReel.classList.remove("is-playing");
-  modalReel.classList.toggle("has-real-video", Boolean(video.src));
-  document.body.classList.toggle("video-open", Boolean(video.src));
-  playToggle.textContent = video.src ? "播放视频 Play Video" : "播放 Play";
-  timelineProgress.style.animation = "none";
-  videoModal.showModal();
+  if (liveStageKicker) liveStageKicker.textContent = slide.kicker;
+  if (liveStageTitle) liveStageTitle.textContent = slide.title;
+  if (liveStageNumber) liveStageNumber.textContent = slide.number;
+  if (liveStagePrimaryLabel) liveStagePrimaryLabel.textContent = slide.primaryLabel;
+  if (liveStagePrimary) liveStagePrimary.textContent = slide.primary;
+  if (liveStagePrimaryNote) liveStagePrimaryNote.textContent = slide.primaryNote;
+  if (liveStageSecondaryLabel) liveStageSecondaryLabel.textContent = slide.secondaryLabel;
+  if (liveStageSecondary) liveStageSecondary.textContent = slide.secondary;
+  if (liveStageSecondaryNote) liveStageSecondaryNote.textContent = slide.secondaryNote;
+
+  document.querySelectorAll("[data-live-stage]").forEach((button) => {
+    const isActive = Number(button.dataset.liveStage) === nextIndex;
+    button.classList.toggle("is-active", isActive);
+    if (button.classList.contains("stage-tab")) {
+      button.setAttribute("aria-selected", String(isActive));
+    }
+  });
+
+  restartBookingLiveProgress();
+}
+
+function startBookingLive() {
+  if (!bookingLiveStage) return;
+  window.clearInterval(bookingLiveTimer);
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  bookingLiveTimer = window.setInterval(() => {
+    setBookingLiveStage(bookingLiveIndex + 1);
+  }, 4600);
+}
+
+function initBookingLive() {
+  if (!bookingLiveStage) return;
+  setBookingLiveStage(0);
+  startBookingLive();
+
+  bookingLiveStage.addEventListener("mouseenter", () => window.clearInterval(bookingLiveTimer));
+  bookingLiveStage.addEventListener("mouseleave", startBookingLive);
+  bookingLiveStage.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-live-stage]");
+    if (!button) return;
+    setBookingLiveStage(Number(button.dataset.liveStage));
+    startBookingLive();
+  });
 }
 
 function updateScrollRatio() {
@@ -2345,30 +2339,19 @@ function bindEvents() {
 
   coachGrid.addEventListener("click", (event) => {
     const bookButton = event.target.closest("[data-book-coach]");
-    const coachVideoLink = event.target.closest("[data-coach-video-id]");
-    const videoButton = event.target.closest("[data-video-coach]");
     if (bookButton) {
       selectCoachForBooking(bookButton.dataset.bookCoach);
       return;
     }
-    if (coachVideoLink) {
-      openVideo(coachVideoLink.dataset.coachVideoId);
-      return;
-    }
-    if (videoButton) {
-      const coach = coaches.find((item) => item.id === videoButton.dataset.videoCoach);
-      if (coach) openVideo(`${coach.id}-0`);
-    }
-  });
-
-  videoGrid.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-video-id]");
-    if (button) openVideo(button.dataset.videoId);
   });
 
   programGrid.addEventListener("click", (event) => {
     const button = event.target.closest("[data-program-name]");
     if (button) selectProgram(button.dataset.programName);
+  });
+
+  document.querySelectorAll("[data-program-preset]").forEach((button) => {
+    button.addEventListener("click", () => selectProgram(button.dataset.programPreset, { target: "#ai-advisor" }));
   });
 
   coachSelect.addEventListener("change", (event) => {
@@ -2407,7 +2390,7 @@ function bindEvents() {
   minorSafetyToggle?.addEventListener("click", () => {
     setMinorSafetyExpanded(minorSafetyToggle.getAttribute("aria-expanded") !== "true");
   });
-  [advisorName, advisorAge, advisorGender, advisorPhone, advisorIdCard, guardianName, guardianPhone, emergencyName, emergencyPhone, healthHistory, riskAcknowledged, advisorGoal, advisorIdeas, bookingAddress, paymentMethod, paymentAcknowledged].forEach((field) => {
+  [advisorName, advisorAge, advisorGender, advisorPhone, guardianName, guardianPhone, emergencyName, emergencyPhone, healthHistory, riskAcknowledged, advisorGoal, advisorIdeas, bookingAddress, paymentMethod, paymentAcknowledged].forEach((field) => {
     field?.addEventListener("input", () => clearFieldError(field));
     field?.addEventListener("change", () => clearFieldError(field));
   });
@@ -2418,7 +2401,6 @@ function bindEvents() {
     const selectedDate = upcomingDates[state.selectedDateIndex];
     const name = advisorName.value.trim();
     const phone = normalizePhone(advisorPhone.value);
-    const idCardRaw = advisorIdCard.value.trim();
     const location = getBookingLocationInput();
 
     if (isWechatNativePayment()) {
@@ -2465,9 +2447,6 @@ function bindEvents() {
       slot: state.selectedSlot,
       name,
       phone,
-      idCard: "",
-      idCardMasked: maskIdCard(idCardRaw),
-      idCardLast4: idCardRaw ? idCardRaw.slice(-4) : "",
       age: advisorAge.value,
       gender: advisorGender.value,
       isMinor: isMinorAge(advisorAge.value),
@@ -2552,7 +2531,7 @@ function bindEvents() {
     }
   });
 
-  clearBookings.addEventListener("click", () => {
+  clearBookings?.addEventListener("click", () => {
     state.bookings = [];
     saveBookings();
     renderBookings();
@@ -2563,7 +2542,7 @@ function bindEvents() {
     showToast("预约记录已清空 / Bookings cleared");
   });
 
-  copyLatestBooking.addEventListener("click", () => {
+  copyLatestBooking?.addEventListener("click", () => {
     const booking = state.bookings[0];
     if (!booking) {
       copyText(formatBookingMessage(getCurrentBookingDraft()), "已复制当前咨询 / Current inquiry copied");
@@ -2573,19 +2552,19 @@ function bindEvents() {
     copyText(formatBookingMessage(booking), "最新预约已复制 / Latest booking copied");
   });
 
-  exportBookings.addEventListener("click", exportBookingCSV);
+  exportBookings?.addEventListener("click", exportBookingCSV);
 
-  bookingSearch.addEventListener("input", (event) => {
+  bookingSearch?.addEventListener("input", (event) => {
     state.bookingSearch = event.target.value;
     renderBookings();
   });
 
-  bookingStatusFilter.addEventListener("change", (event) => {
+  bookingStatusFilter?.addEventListener("change", (event) => {
     state.bookingStatusFilter = event.target.value;
     renderBookings();
   });
 
-  bookingList.addEventListener("click", async (event) => {
+  bookingList?.addEventListener("click", async (event) => {
     const copyButton = event.target.closest("[data-copy-booking]");
     const calendarButton = event.target.closest("[data-calendar-booking]");
     const deleteButton = event.target.closest("[data-delete-booking]");
@@ -2613,7 +2592,7 @@ function bindEvents() {
     }
   });
 
-  bookingList.addEventListener("change", async (event) => {
+  bookingList?.addEventListener("change", async (event) => {
     const statusSelect = event.target.closest("[data-status-select]");
     if (!statusSelect) return;
     const booking = getBookingById(statusSelect.dataset.statusSelect);
@@ -2662,7 +2641,7 @@ function bindEvents() {
       }
 
       if (recordsButton) {
-        document.querySelector("#my-bookings").scrollIntoView({ behavior: "smooth", block: "start" });
+        document.querySelector("#my-bookings")?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
 
@@ -2675,12 +2654,12 @@ function bindEvents() {
     });
   }
 
-  copyConsultation.addEventListener("click", () => {
+  copyConsultation?.addEventListener("click", () => {
     const booking = state.bookings[0] || getCurrentBookingDraft();
     copyText(formatBookingMessage(booking), "咨询话术已复制 / Inquiry copied");
   });
 
-  shareConsultation.addEventListener("click", () => {
+  shareConsultation?.addEventListener("click", () => {
     const booking = state.bookings[0] || getCurrentBookingDraft();
     shareText(formatBookingMessage(booking));
   });
@@ -2708,7 +2687,6 @@ function bindEvents() {
   advisorResult.addEventListener("click", (event) => {
     const applyButton = event.target.closest("[data-apply-advisor]");
     const copyButton = event.target.closest("[data-copy-advisor]");
-    const watchButton = event.target.closest("[data-watch-advisor]");
     if (applyButton) {
       applyAdvisorRecommendation(applyButton);
       return;
@@ -2716,9 +2694,6 @@ function bindEvents() {
     if (copyButton) {
       copyText(advisorResult.innerText.trim(), "推荐方案已复制 / Plan copied");
       return;
-    }
-    if (watchButton) {
-      openVideo(`${watchButton.dataset.watchAdvisor}-0`);
     }
   });
 
@@ -2744,7 +2719,7 @@ function bindEvents() {
       agreementState.confirmedAt = "";
     }
   });
-  [advisorName, advisorPhone, advisorIdCard, guardianName, guardianPhone, emergencyName, emergencyPhone, healthHistory, riskAcknowledged, paymentPlan, paymentMethod, paymentAcknowledged].forEach((input) => {
+  [advisorName, advisorPhone, guardianName, guardianPhone, emergencyName, emergencyPhone, healthHistory, riskAcknowledged, paymentPlan, paymentMethod, paymentAcknowledged].forEach((input) => {
     input?.addEventListener("input", () => {
       resetAgreementConfirmation();
       if (agreementModal && !agreementModal.hidden) renderAgreementDocument();
@@ -2788,40 +2763,6 @@ function bindEvents() {
     }
   });
 
-  closeModal.addEventListener("click", () => videoModal.close());
-
-  bookFromVideo.addEventListener("click", () => {
-    videoModal.close();
-    selectCoachForBooking(state.activeVideoCoachId);
-    showToast("已带入视频教练 / Coach selected");
-  });
-
-  playToggle.addEventListener("click", () => {
-    if (!modalVideo.hidden && modalVideo.src) {
-      if (modalVideo.paused) {
-        modalVideo.play();
-        modalReel.classList.add("is-playing");
-        playToggle.textContent = "暂停 Pause";
-        return;
-      }
-      modalVideo.pause();
-      modalReel.classList.remove("is-playing");
-      playToggle.textContent = "播放视频 Play Video";
-      return;
-    }
-
-    const isPlaying = modalReel.classList.toggle("is-playing");
-    playToggle.textContent = isPlaying ? "暂停 Pause" : "播放 Play";
-    if (isPlaying) timelineProgress.style.animation = "";
-  });
-
-  videoModal.addEventListener("close", () => {
-    modalVideo.pause();
-    document.body.classList.remove("video-open");
-    modalReel.classList.remove("is-playing");
-    playToggle.textContent = "播放 Play";
-  });
-
   window.addEventListener("scroll", updateScrollRatio, { passive: true });
 }
 
@@ -2835,7 +2776,6 @@ function init() {
   placeBookingCard();
   renderFilters();
   renderCoaches();
-  renderVideos();
   renderPrograms();
   renderSelectors();
   renderDates();
@@ -2843,6 +2783,7 @@ function init() {
   syncHomeAddressField();
   syncMinorSafetyPanel();
   renderBookings();
+  initBookingLive();
   bindEvents();
   refreshPaymentConfig({ silent: true });
   refreshBookingsFromServer({ silent: true });

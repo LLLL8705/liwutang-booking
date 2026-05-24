@@ -25,31 +25,27 @@
       </a>
       <nav class="nav-links" aria-label="主导航 Main navigation">
         <a href="#home">首页 Home</a>
-        <a href="#ai-advisor">AI选课 AI Match</a>
         <a href="#coaches">教练 Coaches</a>
-        <a href="#programs">课程 Programs</a>
-        <a href="#videos">视频 Videos</a>
+        <a href="#ai-advisor">AI选课 AI Match</a>
         <a href="#booking-page">确认预约 Booking</a>
       </nav>
-      <button class="nav-cta" type="button" data-scroll-target="#booking-page">立即约课 Book Now</button>
+      <button class="nav-cta" type="button" data-scroll-target="#ai-advisor">开始AI选课 Start Match</button>
     </header>
 
     <main>
       <section class="hero" id="home">
         <div class="hero-copy">
-          <p class="eyebrow">北京专业武术私教团队 · AI Martial Arts Training Academy</p>
-          <h1><span>冠军教练亲授</span><span>让武术训练真正专业</span></h1>
-          <p class="hero-en">Champion coaches. Real training. Clear booking.</p>
+          <p class="eyebrow">AI武术私教匹配与预约平台 · Martial Arts Coach Matching</p>
+          <h1><span>让专业武术教练</span><span>匹配真正适合你的训练目标</span></h1>
+          <p class="hero-en">AI matches your goal, then staff confirms the class.</p>
           <p class="hero-lede">
-            由现役专业队、国家级健将、国际级健将组成教学团队。<br />
-            面向青少年升学、赛事提升、成人系统训练与零基础入门。<br />
-            先看真实教练资历和训练视频，再由 AI 匹配合适教练。<br />
-            留下预约意向后，工作人员电话确认课程与时间。
+            1分钟填写年龄、目标和想学项目，AI先推荐合适教练与课程方向。<br />
+            再选择可约时间、阅读协议并确认预约，工作人员后台会同步收到并电话跟进。<br />
+            适合零基础入门、青少年专项、成人太极、器械提升和比赛训练。
           </p>
           <p class="hero-lede en">
-            AI matches goals and schedules.<br />
-            Follow-up stays clear.<br />
-            Competitive wushu, weapons, tai chi, and traditional forms.
+            Built for real booking: coach match, agreement confirmation, staff follow-up.<br />
+            Competitive wushu, weapons, tai chi, Nanquan, and traditional forms.
           </p>
           <div class="hero-highlights" aria-label="课程亮点 Training highlights">
             <span>冠军教练<em>Champion Coaches</em></span>
@@ -58,81 +54,99 @@
             <span>太极形意<em>Tai Chi & Xingyi</em></span>
           </div>
           <div class="hero-actions">
-            <button class="primary-btn" type="button" data-scroll-target="#ai-advisor">让 AI 推荐教练</button>
-            <button class="ghost-btn light" type="button" data-scroll-target="#coaches">先看教练实力</button>
+            <button class="primary-btn" type="button" data-scroll-target="#ai-advisor">开始 AI 选课</button>
+            <button class="ghost-btn light" type="button" data-scroll-target="#coaches">查看教练</button>
           </div>
         </div>
 
         <section class="commerce-stage" aria-label="专业武术预约体验 Professional booking experience">
-          <div class="stage-browser public-stage">
-            <div class="browser-bar">
-              <span class="traffic red"></span>
-              <span class="traffic gold"></span>
-              <span class="traffic green"></span>
-              <span class="address">liwutang.academy / professional wushu coaching</span>
-              <span class="browser-action">预约中</span>
-            </div>
-            <div class="demo-control">
-              <div>
-                <strong>AI + 冠军教练预约系统</strong>
-                <span>看实力、选教练、定时间，一条路径完成</span>
-              </div>
-              <button class="demo-toggle" type="button" data-scroll-target="#booking-page">体验预约</button>
-              <div class="demo-track"><span></span></div>
-            </div>
+          <div class="stage-browser public-stage customer-hero-visual" id="bookingLiveStage">
             <div class="stage-canvas">
-              <img class="stage-image" src="assets/ink-wash-hero-bg.png" alt="" />
+              <img class="stage-image" id="liveStageImage" src="assets/ink-wash-hero-bg.png" alt="预约流程：选择训练目标" />
               <span class="stage-shade"></span>
-              <div class="stage-menu" aria-hidden="true">
-                <strong>训练决策流程</strong>
-                <span class="stage-tab is-active">01 看实力</span>
-                <span class="stage-tab">02 AI 匹配</span>
-                <span class="stage-tab">03 确认预约</span>
-                <span class="stage-tab">04 后台跟进</span>
+              <div class="stage-live-badge" aria-hidden="true">
+                <i></i>
+                <span>LIVE</span>
+                <em>预约流程</em>
+              </div>
+              <div class="stage-menu" aria-label="预约流程演示">
+                <strong>预约流程</strong>
+                <button class="stage-tab is-active" type="button" data-live-stage="0" aria-selected="true">01 选择目标</button>
+                <button class="stage-tab" type="button" data-live-stage="1" aria-selected="false">02 匹配教练</button>
+                <button class="stage-tab" type="button" data-live-stage="2" aria-selected="false">03 确认时间</button>
+                <button class="stage-tab" type="button" data-live-stage="3" aria-selected="false">04 开始训练</button>
               </div>
               <div class="stage-title">
-                <span>LIWUTANG PROFESSIONAL WUSHU TEAM</span>
-                <strong>国家级与国际级运动健将组成的武术私教团队</strong>
+                <span id="liveStageKicker">STEP 01 · GOAL</span>
+                <strong id="liveStageTitle">先说目标，AI判断训练方向</strong>
               </div>
-              <div class="stage-number">01</div>
+              <div class="stage-number" id="liveStageNumber">01</div>
               <article class="floating-card lesson-card">
-                <span>推荐路径</span>
-                <strong>长拳 / 剑枪 / 太极 / 南拳</strong>
-                <small>按目标、年龄、项目和时间自动匹配</small>
+                <span id="liveStagePrimaryLabel">目标信息</span>
+                <strong id="liveStagePrimary">年龄 / 基础 / 项目 / 目标</strong>
+                <small id="liveStagePrimaryNote">比赛、升学、专项提升或零基础入门都可以填写。</small>
               </article>
               <article class="floating-card signal-card">
-                <span>预约信号</span>
-                <strong>编号 + 协议 + 后台提醒</strong>
-                <small>提交后生成预约编号，工作人员电话确认</small>
+                <span id="liveStageSecondaryLabel">下一步</span>
+                <strong id="liveStageSecondary">生成教练推荐</strong>
+                <small id="liveStageSecondaryNote">AI会根据目标先给出更合适的教练方向。</small>
               </article>
-            </div>
-          </div>
-          <div class="motion-ticker" aria-hidden="true">
-            <div>
-              <span>冠军教练团队</span>
-              <span>AI 智能匹配</span>
-              <span>公开视频展示</span>
-              <span>手机电脑可访问</span>
-              <span>后台同步预约</span>
-              <span>协议确认闭环</span>
-              <span>Champion Coaching</span>
-              <span>Smart Booking</span>
+              <div class="stage-photo-strip" aria-label="预约流程照片">
+                <button class="is-active" type="button" data-live-stage="0" aria-label="选择目标">
+                  <img src="assets/ink-wash-hero-bg.png" alt="" />
+                  <span>目标</span>
+                </button>
+                <button type="button" data-live-stage="1" aria-label="匹配教练">
+                  <img src="assets/zhang-qingchun-photo.jpg" alt="" />
+                  <span>教练</span>
+                </button>
+                <button type="button" data-live-stage="2" aria-label="确认时间">
+                  <img src="assets/dojo-hero.png" alt="" />
+                  <span>时间</span>
+                </button>
+                <button type="button" data-live-stage="3" aria-label="开始训练">
+                  <img src="assets/zhu-wanbo-action-photo.jpg" alt="" />
+                  <span>训练</span>
+                </button>
+              </div>
+              <div class="stage-live-progress" aria-hidden="true"><span id="liveStageProgress"></span></div>
             </div>
           </div>
         </section>
 
         <section class="trust-panel" aria-label="专业信任指标 Trust signals">
           <article>
-            <strong>AI</strong>
-            <span>智能匹配<br /><em>Smart matching</em></span>
+            <strong>1min</strong>
+            <span>填写目标<br /><em>Quick intake</em></span>
           </article>
           <article>
             <strong>4</strong>
-            <span>专业教练<br /><em>Professional coaches</em></span>
+            <span>冠军教练<br /><em>Champion coaches</em></span>
           </article>
           <article>
-            <strong>7</strong>
-            <span>天可预约<br /><em>Bookable days</em></span>
+            <strong>闭环</strong>
+            <span>后台跟进<br /><em>Staff follow-up</em></span>
+          </article>
+        </section>
+
+        <section class="home-offers" aria-label="首次预约入口 Booking entry products">
+          <article>
+            <span>首次体验 Trial</span>
+            <strong>一对一武术体验课</strong>
+            <p>适合还不确定学什么的顾客，先由AI判断方向，再由工作人员确认教练与时间。</p>
+            <button class="primary-btn" type="button" data-program-preset="还不确定，让AI推荐" data-scroll-target="#ai-advisor">预约体验</button>
+          </article>
+          <article>
+            <span>专项评估 Assessment</span>
+            <strong>比赛 / 升学专项评估</strong>
+            <p>适合有明确目标的学员，围绕长拳、南拳、器械、太极等专项匹配教练。</p>
+            <button class="ghost-btn light" type="button" data-program-preset="竞技武术套路" data-scroll-target="#ai-advisor">做专项评估</button>
+          </article>
+          <article>
+            <span>Adult & Kids</span>
+            <strong>成人修身与青少年提升</strong>
+            <p>成人可选太极形意，青少年可做协调、体能、套路质量和竞赛训练路径。</p>
+            <button class="ghost-btn light" type="button" data-program-preset="太极拳" data-scroll-target="#ai-advisor">选择方向</button>
           </article>
         </section>
 
@@ -225,7 +239,7 @@
                 <div>
                   <p class="section-kicker">服务协议 Service Agreement</p>
                   <h3>武术私教服务协议</h3>
-                  <span>协议会按当前填写的姓名、电话、身份证号和预约教练自动生成。</span>
+                  <span>协议会按当前填写的姓名、电话和预约教练自动生成。</span>
                 </div>
                 <button class="icon-btn" type="button" id="closeAgreement" aria-label="收起协议 Close agreement">×</button>
               </div>
@@ -242,163 +256,24 @@
         </aside>
       </section>
 
-      <section class="public-flow" aria-label="专业预约路径 Professional booking flow">
-        <div class="public-flow-copy">
-          <p class="section-kicker">Professional Coaching Flow</p>
-          <h2>一打开就看懂：谁来教、教什么、怎么预约</h2>
-          <p>
-            首页直接建立信任，中段展示教练资历、比赛成绩与真实训练视频，
-            后段通过 AI 把顾客需求匹配到合适教练，并提交预约意向等待工作人员确认。
-          </p>
+      <section class="section" id="coaches">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">第二页 Coaches</p>
+            <h2>冠军教练团队</h2>
+            <span>教练资质、专项方向和比赛成绩统一展示，顾客可以先建立信任，再交给AI判断适合的训练路径。</span>
+          </div>
+          <div class="filter-row" id="coachFilters" aria-label="教练筛选 Coach filters"></div>
         </div>
-        <div class="public-flow-track">
-          <article>
-            <span>01</span>
-            <strong>建立信任</strong>
-            <em>冠军团队、真实照片、教学方向清晰</em>
-          </article>
-          <article>
-            <span>02</span>
-            <strong>证明专业</strong>
-            <em>教练简介、成绩、视频统一展示</em>
-          </article>
-          <article>
-            <span>03</span>
-            <strong>AI 推荐</strong>
-            <em>把顾客需求转成教练和课程建议</em>
-          </article>
-          <article>
-            <span>04</span>
-            <strong>预约跟进</strong>
-            <em>生成编号，工作人员收到后电话确认</em>
-          </article>
-        </div>
-      </section>
-
-      <section class="ai-system" aria-label="AI训练系统 AI training system">
-        <div class="ai-system-copy">
-          <p class="section-kicker">专业团队 Professional Team</p>
-          <h2>真人冠军教练上课，AI让训练更精准</h2>
-          <p>
-            我们把专业教练、训练影像、课程目标和可约时间段整合在一起。学生进来先看团队实力，再按目标匹配课程，最后直接预约体验课。
-          </p>
-          <p class="en">
-            Professional coaches deliver the training. AI supports goal matching, program paths, booking, and follow-up.
-          </p>
-        </div>
-        <div class="ai-system-steps">
-          <article>
-            <span>01</span>
-            <strong>目标匹配</strong>
-            <em>Goal Match</em>
-            <p>按年龄、基础、训练目标推荐合适课程与教练。</p>
-          </article>
-          <article>
-            <span>02</span>
-            <strong>训练路径</strong>
-            <em>Training Path</em>
-            <p>从体验课到进阶课，形成可持续的学习路线。</p>
-          </article>
-          <article>
-            <span>03</span>
-            <strong>预约跟进</strong>
-            <em>Booking Follow-up</em>
-            <p>时间段、教练、课程记录集中管理，减少流失。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="feature-strip" aria-label="核心体验 Core experience">
-        <article>
-          <span>01</span>
-          <h2>先看专业</h2>
-          <h3>Professional First</h3>
-          <p>先用团队背景、教练成绩和真实训练影像建立信任，再进入选课流程。</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h2>AI再匹配</h2>
-          <h3>AI Matching</h3>
-          <p>根据基础、目标和时间，先把学生导向更适合的课程选择。</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h2>教练真授课</h2>
-          <h3>Real Coaching</h3>
-          <p>竞技套路、太极形意、南拳器械、剑枪八卦分专项授课，避免一套课教所有人。</p>
-        </article>
-      </section>
-
-      <section class="proof-wall" aria-label="专业保障 Professional proof">
-        <div class="proof-copy">
-          <p class="section-kicker">专业保障 Proof of Quality</p>
-          <h2>不是普通兴趣班，是冠军体系下的武术训练</h2>
-          <p>
-            教练来自北京队、全国冠军、世界级赛事与高校运动训练体系。课程不是随便跟练，而是先判断目标、基础和身体条件，再安排适合的专项路线。
-          </p>
-          <p class="en">
-            Built around elite coaching, visible credentials, structured programs, and a clear first-class experience.
-          </p>
-        </div>
-        <div class="proof-grid">
-          <article>
-            <strong>01</strong>
-            <span>真实资历</span>
-            <em>Verified coaching backgrounds</em>
-            <p>教练履历、赛事成绩、专项方向在页面完整展示，家长和学员可以先了解再决定。</p>
-          </article>
-          <article>
-            <strong>02</strong>
-            <span>专项匹配</span>
-            <em>Goal-based matching</em>
-            <p>竞技套路、太极形意、南拳器械、剑枪八卦分开匹配，不用一套课覆盖所有人。</p>
-          </article>
-          <article>
-            <strong>03</strong>
-            <span>过程清晰</span>
-            <em>Transparent training path</em>
-            <p>从体验课到进阶训练，用户能看到教练、视频、时间段和推荐理由。</p>
-          </article>
-          <article>
-            <strong>04</strong>
-            <span>适合成交</span>
-            <em>Commercial-ready flow</em>
-            <p>AI推荐、选教练、选时间、预约记录和咨询话术串起来，方便一人团队持续运营。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="journey-rail" aria-label="学员体验路径 Student journey">
-        <div>
-          <p class="section-kicker">体验路径 Student Journey</p>
-          <h2>用户进入网站后的决策路径</h2>
-        </div>
-        <div class="journey-steps">
-          <article>
-            <span>看实力</span>
-            <strong>教练、成绩、视频先建立信任</strong>
-          </article>
-          <article>
-            <span>说目标</span>
-            <strong>把年龄、项目、目标告诉 AI</strong>
-          </article>
-          <article>
-            <span>得推荐</span>
-            <strong>系统给出合适教练和训练方向</strong>
-          </article>
-          <article>
-            <span>约体验</span>
-            <strong>选择教练、日期和时间段</strong>
-          </article>
-        </div>
+        <div class="coach-grid" id="coachGrid"></div>
       </section>
 
       <section class="ai-advisor" id="ai-advisor" aria-label="AI选课顾问 AI coach advisor">
         <div class="advisor-head">
           <div>
-            <p class="section-kicker">第二步 AI Recommendation</p>
-            <h2>AI推荐教练与训练路径</h2>
-            <span>填写信息后，右侧立即生成教练、课程和训练路径，再一键带入预约。</span>
+            <p class="section-kicker">第三页 AI Recommendation</p>
+            <h2>填写目标，AI推荐教练</h2>
+            <span>不需要顾客自己判断专业方向，系统先给出推荐教练、课程路径和理由，再一键进入预约确认。</span>
           </div>
         </div>
 
@@ -430,11 +305,6 @@
                 <input id="advisorPhone" name="advisorPhone" type="tel" placeholder="手机 / Phone" />
               </label>
             </div>
-
-            <label>
-              <span>身份证号 ID Number</span>
-              <input id="advisorIdCard" name="advisorIdCard" type="text" placeholder="签约/付款后补充，可先不填 / Optional before signing" />
-            </label>
 
             <div class="risk-panel is-collapsed" id="minorSafetyPanel" hidden>
               <button class="risk-panel-head" type="button" id="minorSafetyToggle" aria-expanded="false" aria-controls="minorSafetyBody">
@@ -484,6 +354,7 @@
                 <option value="剑术 枪术 八卦掌 世界冠军">剑术 / 枪术 / 八卦掌</option>
                 <option value="南拳 南刀 南棍 朴刀">南拳与器械 / Nanquan & Weapons</option>
                 <option value="太极拳 推手 内家身法">太极拳 / Tai Chi</option>
+                <option value="通臂拳 棍术 传统套路">通臂拳 / 棍术 / Tongbeiquan & Staff</option>
               </select>
             </label>
 
@@ -514,25 +385,13 @@
       <section class="section booking-page" id="booking-page" aria-label="选择教练与时间 Choose coach and time">
         <div class="section-head">
           <div>
-            <p class="section-kicker">第三步 Coach Booking</p>
-            <h2>选择教练与时间</h2>
-            <span>Choose the matched coach and available time slot.</span>
+            <p class="section-kicker">第四页 Booking Confirmation</p>
+            <h2>确认教练、时间与协议</h2>
+            <span>AI推荐后在这里选时间，阅读协议并确认，工作人员后台会收到完整预约信息。</span>
           </div>
         </div>
         <div class="booking-page-body" id="bookingPageBody"></div>
         <div class="post-booking-panel" id="postBookingPanel" hidden></div>
-      </section>
-
-      <section class="section" id="coaches">
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">教练团队 Coaches</p>
-            <h2>专业教练做教学，AI帮你选对课</h2>
-            <span>Real coaches. Smarter training choices.</span>
-          </div>
-          <div class="filter-row" id="coachFilters" aria-label="教练筛选 Coach filters"></div>
-        </div>
-        <div class="coach-grid" id="coachGrid"></div>
       </section>
 
       <section class="section" id="programs">
@@ -546,67 +405,6 @@
         <div class="program-grid" id="programGrid"></div>
       </section>
 
-      <section class="section section-dark" id="videos">
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">训练影像 Training Clips</p>
-            <h2>先看真实教练，再决定约哪节</h2>
-            <span>Watch real coaching before booking.</span>
-          </div>
-          <button class="ghost-btn" type="button" data-scroll-target="#booking-card">看完约课 Book After Watching</button>
-        </div>
-        <div class="video-grid" id="videoGrid"></div>
-      </section>
-
-      <section class="section bookings-section" id="my-bookings" hidden>
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">我的预约 My Classes</p>
-            <h2>预约记录</h2>
-            <span>Your local booking list.</span>
-          </div>
-          <div class="booking-tools">
-            <button class="ghost-btn light" type="button" id="copyLatestBooking">复制最新 Copy Latest</button>
-            <button class="ghost-btn light" type="button" id="exportBookings">导出名单 Export</button>
-            <button class="ghost-btn light" type="button" id="clearBookings">清空记录 Clear</button>
-          </div>
-        </div>
-        <div class="booking-ops" aria-label="预约运营管理 Booking operations">
-          <div class="booking-stats" id="bookingStats"></div>
-          <div class="booking-filters">
-            <label>
-              <span>搜索 Search</span>
-              <input id="bookingSearch" type="search" placeholder="姓名、电话、教练、课程..." />
-            </label>
-            <label>
-              <span>状态 Status</span>
-              <select id="bookingStatusFilter">
-                <option value="全部">全部 All</option>
-                <option value="待支付">待支付 Payment Pending</option>
-                <option value="待跟进">待跟进 Pending</option>
-                <option value="已联系">已联系 Contacted</option>
-                <option value="已确认">已确认 Confirmed</option>
-                <option value="已完成">已完成 Completed</option>
-                <option value="已取消">已取消 Canceled</option>
-              </select>
-            </label>
-          </div>
-        </div>
-        <div class="booking-list" id="bookingList"></div>
-      </section>
-
-      <section class="commercial-panel" id="business-actions" aria-label="商业转化 Business actions" hidden>
-        <div>
-          <p class="section-kicker">成交动作 Business Actions</p>
-          <h2>把咨询变成可跟进的预约</h2>
-          <span>Turn interest into a follow-up booking.</span>
-        </div>
-        <div class="commercial-actions">
-          <button class="primary-btn" type="button" id="copyConsultation">复制咨询话术 Copy Inquiry</button>
-          <button class="ghost-btn light" type="button" id="shareConsultation">发送给客服 Share</button>
-          <button class="ghost-btn light" type="button" data-scroll-target="#booking-card">继续选时间 Choose Time</button>
-        </div>
-      </section>
     </main>
 
     <section class="support-widget" id="supportWidget" aria-label="智能客服 Customer support">
@@ -643,31 +441,6 @@
     </section>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-    <dialog class="video-modal" id="videoModal">
-      <div class="modal-head">
-        <div>
-          <p class="section-kicker" id="modalCoach">Coach</p>
-          <h3 id="modalTitle">训练片段 Training Clip</h3>
-        </div>
-        <div class="modal-actions">
-          <button class="primary-btn" type="button" id="bookFromVideo">预约此教练 Book Coach</button>
-          <button class="icon-btn" type="button" id="closeModal" aria-label="关闭视频 Close video">×</button>
-        </div>
-      </div>
-      <div class="reel-frame" id="modalReel">
-        <img id="modalPoster" src="assets/ink-hero.png" alt="" />
-        <video id="modalVideo" playsinline controls preload="none" hidden></video>
-        <div class="reel-overlay">
-          <button class="play-btn" type="button" id="playToggle">播放 Play</button>
-          <div class="reel-meta">
-            <span id="modalTopic">基础训练 Foundation Training</span>
-            <strong id="modalDuration">01:00</strong>
-          </div>
-        </div>
-        <div class="timeline"><span id="timelineProgress"></span></div>
-      </div>
-    </dialog>
 
     <script src="app.js"></script>
   </body>
